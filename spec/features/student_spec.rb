@@ -16,6 +16,8 @@ describe 'Multiple students' do
     expect(page).to have_content(/Daenerys|Lindsey/)
   end
 end
+ 
+
 
 describe 'form page' do
   it 'renders the form with the new action' do
@@ -62,4 +64,6 @@ describe 'linking from the index page to the show page' do
     visit students_path
     expect(page).to have_link(@student.to_s, href: student_path(@student))
   end
+
+
 end
